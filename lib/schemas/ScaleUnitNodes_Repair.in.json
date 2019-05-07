@@ -1,0 +1,65 @@
+{
+    "type": "object",
+    "properties": {
+        "subscriptionId": {
+            "required": true,
+            "type": "string"
+        },
+        "resourceGroupName": {
+            "required": true,
+            "type": "string"
+        },
+        "location": {
+            "required": true,
+            "type": "string"
+        },
+        "scaleUnitNode": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "description": "Description of a bare metal node used for ScaleOut operation on a cluster.",
+            "properties": {
+                "biosVersion": {
+                    "description": "Bios version of the physical machine.",
+                    "type": "string"
+                },
+                "bmcIpv4Address": {
+                    "description": "BMC address of the physical machine.",
+                    "type": "string",
+                    "x-ms-client-name": "BMCIPv4Address"
+                },
+                "clusterName": {
+                    "description": "Name of the cluster.",
+                    "type": "string"
+                },
+                "computerName": {
+                    "description": "Name of the computer.",
+                    "type": "string"
+                },
+                "macAddress": {
+                    "description": "Name of the MAC address of the bare metal node.",
+                    "type": "string"
+                },
+                "model": {
+                    "description": "Model of the physical machine.",
+                    "type": "string"
+                },
+                "serialNumber": {
+                    "description": "Serial number of the physical machine.",
+                    "type": "string"
+                },
+                "vendor": {
+                    "description": "Vendor of the physical machine.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "api_version": {
+            "required": true,
+            "type": "string",
+            "default": "2016-05-01"
+        }
+    }
+}
